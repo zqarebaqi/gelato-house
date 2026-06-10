@@ -4,7 +4,7 @@
 function App() {
 
   return (
-   <h1>gelato house</h1>
+   <h1 className="bg-rose-400">gelato house</h1>
   )
 }
 
