@@ -1,11 +1,7 @@
-
-
+import Layout from "./components/layouts";
 
 function App() {
-
-  return (
-   <h1 className="bg-rose-400">gelato house</h1>
-  )
+  return <Layout></Layout>;
 }
 
-export default App
+export default App;
