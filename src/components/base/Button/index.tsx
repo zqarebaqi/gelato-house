@@ -7,7 +7,7 @@ type ButtonProps = {
   size?: "small" | "medium" | "large";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const buttonBaseStyles = "rounded-xl";
+const buttonBaseStyles = "rounded-full outline-none";
 
 const variants = {
   contained: {
@@ -25,16 +25,16 @@ const variants = {
 };
 
 const sizes = {
-  small: "px-2 py-1 text-sm",
-  medium: "px-4 py-2 text-base",
-  large: "px-6 py-3 text-lg",
+  small: "px-4 py-1 text-sm",
+  medium: "px-6 py-2 text-base",
+  large: "px-8 py-3 text-lg",
 };
 
 export const Button: React.FC<ButtonProps> = ({
   variant = "contained",
   children,
   color = "primary",
-  size = "small",
+  size = "medium",
   ...props
 }): JSX.Element => {
   return (

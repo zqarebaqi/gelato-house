@@ -1,36 +1,49 @@
 import { Button } from "../base/Button";
+import Container from "../base/Container";
+import Logo from "../base/Logo";
 
 export const Header: React.FC = () => {
   return (
     <header>
-      <Button
-        variant="contained"
-        onClick={() => {
-          console.log("clicked");
-        }}
-        size="medium"
-      >
-        کلیک کن
-      </Button>
-      <Button
-        variant="outlined"
-        color="secondary"
-        onClick={() => {
-          console.log("clicked");
-        }}
-        size="large"
-      >
-        کلیک کن
-      </Button>
-      <Button
-        variant="text"
-        onClick={() => {
-          console.log("clicked");
-        }}
-        size="small"
-      >
-        کلیک کن
-      </Button>
+      <Container>
+        <div className="flex items-center justify-between">
+          <div className="py-2">
+            <Logo />
+          </div>
+          <div className="[&>Button]:mr-2 flex">
+            <div className="hidden md:flex">
+              <Button
+                variant="text"
+                color="primary"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                سفارش اینترنتی
+              </Button>
+              <Button
+                variant="text"
+                color="primary"
+                onClick={() => {
+                  console.log("clicked");
+                }}
+              >
+                قوانین سایت
+              </Button>
+            </div>
+
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => {
+                console.log("clicked");
+              }}
+            >
+              ورود
+            </Button>
+          </div>
+        </div>
+      </Container>
     </header>
   );
 };
