@@ -10,8 +10,8 @@ export const Header: React.FC = () => {
           <div className="py-2">
             <Logo />
           </div>
-          <div className="[&>Button]:mr-2 flex">
-            <div className="hidden md:flex">
+          <div className=" flex">
+            <div className="hidden md:flex md:gap-3 md:ml-8">
               <Button
                 variant="text"
                 color="primary"
